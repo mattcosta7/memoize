@@ -39,7 +39,8 @@
     "lint": "eslint --report-unused-disable-directives . --color --ext .js,.ts,.tsx && tsc --noEmit && tsc -p test/types && tsc -p test/standard",
     "lint:fix": "eslint --report-unused-disable-directives . --color --ext .js,.ts,.tsx --fix",
     "prepublishOnly": "npm run build",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepare": "npm run build:esm && npm run build:cjs"
   },
   "prettier": "@github/prettier-config",
   "devDependencies": {
